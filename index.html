@@ -845,31 +845,60 @@
             document.getElementById('updatedCount').textContent = updatedCount;
             document.getElementById('progressFill').style.width = percentage + '%';
         }
-
-        function sortSchools() {
-            if (currentSort === 'latest') {
-                filteredSchools.sort((a, b) => {
-                    // Schools with updates first
-                    const aHasData = hasContributorData(a);
-                    const bHasData = hasContributorData(b);
-                    
-                    if (aHasData && !bHasData) return -1;
-                    if (!aHasData && bHasData) return 1;
-                    
-                    // Then by last_updated date (most recent first)
-                    if (a.last_updated && b.last_updated) {
-                        return new Date(b.last_updated) - new Date(a.last_updated);
-                    }
-                    if (a.last_updated) return -1;
-                    if (b.last_updated) return 1;
-                    
-                    return 0;
-                });
-            } else if (currentSort === 'name') {
-                filteredSchools.sort((a, b) => a.name.localeCompare(b.name));
+function sortSchools() {
+    const curriculumFilter = document.getElementById('curriculumFilter').value;
+    const fs1Filter = document.getElementById('fs1Filter').value;
+    const fs2Filter = document.getElementById('fs2Filter').value;
+    
+    if (currentSort === 'latest') {
+        filteredSchools.sort((a, b) => {
+            // Schools with updates first
+            const aHasData = hasContributorData(a);
+            const bHasData = hasContributorData(b);
+            
+            if (aHasData && !bHasData) return -1;
+            if (!aHasData && bHasData) return 1;
+            
+            // Then by last_updated date (most recent first)
+            if (a.last_updated && b.last_updated) {
+                return new Date(b.last_updated) - new Date(a.last_updated);
             }
-            // 'default' keeps original order
-        }
+            if (a.last_updated) return -1;
+            if (b.last_updated) return 1;
+            
+            return 0;
+        });
+    } else {
+        // Default sort - but prioritize matching filters
+        filteredSchools.sort((a, b) => {
+            // If curriculum filter is active, prioritize exact matches
+            if (curriculumFilter) {
+                const aMatches = a.curriculum === curriculumFilter;
+                const bMatches = b.curriculum === curriculumFilter;
+                if (aMatches && !bMatches) return -1;
+                if (!aMatches && bMatches) return 1;
+            }
+            
+            // If FS1 filter is active, prioritize exact matches
+            if (fs1Filter) {
+                const aMatches = a.fs1_available === fs1Filter;
+                const bMatches = b.fs1_available === fs1Filter;
+                if (aMatches && !bMatches) return -1;
+                if (!aMatches && bMatches) return 1;
+            }
+            
+            // If FS2 filter is active, prioritize exact matches
+            if (fs2Filter) {
+                const aMatches = a.fs2_available === fs2Filter;
+                const bMatches = b.fs2_available === fs2Filter;
+                if (aMatches && !bMatches) return -1;
+                if (!aMatches && bMatches) return 1;
+            }
+            
+            return 0; // Keep original order for rest
+        });
+    }
+}
 
         async function loadSchools() {
             try {
