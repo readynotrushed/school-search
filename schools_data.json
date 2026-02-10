@@ -5413,11 +5413,11 @@
     "location": "AL BARSHA SECOND",
     "location_arabic": "البرشاء الثانية",
     "curriculum": "",
-    "fs1_available": "",
-    "fs2_available": "",
+    "fs1_available": "Yes",
+    "fs2_available": "Yes",
     "waitlist_status": "",
     "notes": "",
-    "last_updated": "",
+    "last_updated": "2026-02-10",
     "school_type": "ecc_only",
     "accepts_2023_fs1": true,
     "accepts_2022_fs2": true,
@@ -6901,7 +6901,7 @@
   },
   {
     "id": "294",
-    "name": "Deira International School",
+    "name": "Dubai International School",
     "location": "Dubai Festival City",
     "lat": 25.2127475738525,
     "lng": 55.3737487792969,
@@ -6912,11 +6912,11 @@
     "accepts_2023_fs1": true,
     "accepts_2022_fs2": true,
     "grade_range": "FS1-Y13",
-    "fs1_available": "",
-    "fs2_available": "",
+    "fs1_available": "Yes",
+    "fs2_available": "Yes",
     "waitlist_status": "",
     "notes": "",
-    "last_updated": "",
+    "last_updated": "2026-02-01",
     "school_type": "full_school"
   },
   {
@@ -7373,10 +7373,10 @@
     "accepts_2022_fs2": true,
     "grade_range": "FS1-Y9",
     "fs1_available": "",
-    "fs2_available": "",
+    "fs2_available": "Yes",
     "waitlist_status": "",
     "notes": "",
-    "last_updated": "",
+    "last_updated": "2026-02-10,",
     "school_type": "full_school"
   },
   {
@@ -8072,11 +8072,11 @@
     "accepts_2023_fs1": true,
     "accepts_2022_fs2": true,
     "grade_range": "FS1-Y13",
-    "fs1_available": "",
-    "fs2_available": "",
+    "fs1_available": "No",
+    "fs2_available": "No",
     "waitlist_status": "",
     "notes": "",
-    "last_updated": "",
+    "last_updated": "2026-02-01",
     "school_type": "full_school"
   },
   {
@@ -8372,11 +8372,11 @@
     "accepts_2023_fs1": true,
     "accepts_2022_fs2": true,
     "grade_range": "FS1-Y13",
-    "fs1_available": "",
-    "fs2_available": "",
+    "fs1_available": "No",
+    "fs2_available": "No",
     "waitlist_status": "",
     "notes": "",
-    "last_updated": "",
+    "last_updated": "2026-02-05",
     "school_type": "full_school"
   },
   {
@@ -8653,10 +8653,10 @@
     "accepts_2022_fs2": true,
     "grade_range": "FS1-Y11",
     "fs1_available": "",
-    "fs2_available": "",
+    "fs2_available": "Yes",
     "waitlist_status": "",
     "notes": "",
-    "last_updated": "",
+    "last_updated": "2026-02-01",
     "school_type": "full_school"
   },
   {
@@ -8913,10 +8913,10 @@
     "accepts_2022_fs2": true,
     "grade_range": "FS1-Y13",
     "fs1_available": "",
-    "fs2_available": "",
+    "fs2_available": "Yes",
     "waitlist_status": "",
     "notes": "",
-    "last_updated": "",
+    "last_updated": "2026-02-02",
     "school_type": "full_school"
   },
   {
