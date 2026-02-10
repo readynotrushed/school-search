@@ -849,7 +849,7 @@
 
         async function loadSchools() {
             try {
-                const response = await fetch('ecc_data.json');
+                const response = await fetch('schools_data.json');
                 allSchools = await response.json();
                 filteredSchools = [...allSchools];
                 
