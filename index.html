@@ -652,7 +652,7 @@
                 <h2 class="section-title-large">Made for parents, by parents</h2>
                 <p>Information is provided by families and educators with the goal of supporting each other by sharing knowledge.</p>
                 <p>Help complete the database by pressing the <strong>CONTRIBUTE INFO</strong> button on each listing.</p>
-                <p>People are welcome to contribute with their knowledge the benefit of everyone.</p>
+                <p>People are welcome to contribute with their knowledge for the benefit of everyone.</p>
                 <p class="disclaimer">Aways double check the info at the source.</p>
             </div>
             
@@ -996,7 +996,7 @@ function sortSchools() {
                         <div style="flex: 1;">
                             <h3 class="school-name">${school.name}</h3>
                             ${mapsUrl ? `<a href="${mapsUrl}" target="_blank" class="school-location">📍 ${school.location || 'Location not specified'}</a>` : `<p class="school-location" style="color: #9B9A97;">📍 ${school.location || 'Location not specified'}</p>`}
-                            ${school.last_updated ? `<span class="update-badge updated">Last updated: ${formatDate(school.last_updated)}</span>` : `<span class="update-badge not-updated">Not yet updated - add info</span>`}
+                            ${school.last_updated ? `<span class="update-badge updated">Last updated: ${formatDate(school.last_updated)}</span>` : `<span class="update-badge not-updated">NO INFO RECEIVED</span>`}
                         </div>
                         <div class="age-badge">${school.grade_range || `Ages ${school.age_from}-${school.age_to}`}</div>
                     </div>
